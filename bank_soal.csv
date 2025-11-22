@@ -1,0 +1,10 @@
+id_soal,teks_soal,opsi_a,opsi_b,opsi_c,kunci_jawaban,tag_skills,level
+L01,Rasio untuk mengukur kemampuan bayar utang jangka pendek adalah...,Likuiditas,Profitabilitas,Leverage,A,Analisis Likuiditas,Mudah
+L02,"Jika perusahaan mampu bayar utang saat jatuh tempo, disebut...",Solvabel,Likuid,Illikuid,B,Analisis Likuiditas,Mudah
+L03,Rumus Current Ratio adalah...,Aset/Utang,Utang/Aset,Kas/Utang,A,Analisis Likuiditas,Sedang
+P01,Rasio untuk menilai kemampuan perusahaan mencari laba adalah...,Aktivitas,Profitabilitas,Leverage,B,Analisis Profitabilitas,Mudah
+P02,Rentabilitas Ekonomi membandingkan laba usaha dengan...,Modal Sendiri,Total Modal,Aset Tetap,B,Analisis Profitabilitas,Sedang
+P03,"Jika NPM 15%, artinya...",Rugi 15%,Laba 15%,Beban 15%,B,Analisis Profitabilitas,Sulit
+Lev01,Rasio untuk mengukur seberapa besar utang dibanding modal adalah...,Likuiditas,Leverage,Aktivitas,B,Analisis Leverage,Mudah
+Lev02,Nama lain Rasio Leverage adalah...,Solvabilitas,Rentabilitas,Efisiensi,A,Analisis Leverage,Mudah
+Lev03,"Jika Debt to Equity Ratio 1.0, artinya...",Tanpa Utang,Utang=Modal,Modal>Utang,B,Analisis Leverage,Sedang
