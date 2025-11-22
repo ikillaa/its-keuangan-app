@@ -81,17 +81,23 @@ st.markdown("""
 # ==========================================
 # 2. KONEKSI GOOGLE SHEETS (DATABASE)
 # ==========================================
+# --- KONEKSI KE GOOGLE SHEETS (VERSI HYBRID) ---
 SCOPES = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
 
 @st.cache_resource
 def init_connection():
     try:
+        # Cek 1: Apakah ada di Streamlit Cloud? (Pakai st.secrets)
         if "gcp_service_account" in st.secrets:
             creds_dict = dict(st.secrets["gcp_service_account"])
             creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, SCOPES)
+        
+        # Cek 2: Apakah ada di Laptop Local? (Pakai file secrets.json)
         elif os.path.exists("secrets.json"):
             creds = ServiceAccountCredentials.from_json_keyfile_name("secrets.json", SCOPES)
+        
         else:
+            st.error("Kunci rahasia tidak ditemukan! Harap set up secrets di Streamlit Cloud.")
             return None
         
         client = gspread.authorize(creds)
@@ -99,7 +105,6 @@ def init_connection():
     except Exception as e:
         st.error(f"Database Error: {e}")
         return None
-
 sh = init_connection()
 
 # --- FUNGSI DATABASE ---
@@ -230,4 +235,5 @@ else:
         c1, c2, c3, c4 = st.columns(4)
         with c1:
             st.markdown("""<div class='card icon-btn' style='text-align:center'>
+
                 <img src='
